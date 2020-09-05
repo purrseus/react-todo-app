@@ -1,0 +1,21 @@
+.Input {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 380px;
+  margin: 10px 20px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #bbb;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  margin: 10px 0px 10px 10px;
+  cursor: pointer;
+}

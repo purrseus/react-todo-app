@@ -1,0 +1,39 @@
+h3 {
+  margin: 100px;
+  color: #777;
+}
+
+.ListItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Item {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+.Tick {
+  margin: 10px 12px;
+  cursor: pointer;
+}
+
+.Title {
+  margin-left: 15px;
+  flex-grow: 1;
+  font-size: 18px;
+}
+
+.Completed {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.Remove {
+  margin-right: 30px;
+  cursor: pointer;
+}
