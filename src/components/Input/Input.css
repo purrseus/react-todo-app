@@ -4,7 +4,7 @@
 }
 
 input {
-  width: 380px;
+  width: 400px;
   margin: 10px 20px;
   padding: 10px;
   border-radius: 50px;
@@ -15,7 +15,12 @@ input:focus {
   outline: none;
 }
 
-img {
-  margin: 10px 0px 10px 10px;
+.TickAll {
+  margin: 10px 0px 10px 5px;
   cursor: pointer;
+  transition: .3s;
+}
+
+.TickAll:hover {
+  transform: scale(1.15);
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Input from './components/Input/Input';
 import ListItem from './components/ListItem/ListItem';
@@ -8,6 +8,11 @@ function App() {
 
   const [data, setData] = useState(JSON.parse(localStorage.getItem('todoList')));
   const [selectAll, setSelectAll] = useState(false);
+  const [count, setCount] = useState(data.filter(item => item.completed === false).length);
+
+  useEffect(() => {
+    setCount(data.filter(item => item.completed === false).length);
+  }, [data]);
 
   const selectAllClick = () => {
     const newData = data.map(item => {
@@ -69,6 +74,15 @@ function App() {
         }
       </div>
 
+      <div className="CountItem">
+        {
+          count === 1 ?
+            `${count} task left`
+            : count === 0 ?
+              'Have a nice day!' :
+              `${count} tasks left`
+        }
+      </div>
     </div>
   );
 }

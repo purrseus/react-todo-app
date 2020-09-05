@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import './Input.css';
 import Tick from '../../assets/tick.svg';
-import TickChecked from '../../assets/tick-checked.svg';
+import TickAll from '../../assets/tick-all.svg';
 
 const Input = props => {
   const {
@@ -11,7 +11,7 @@ const Input = props => {
   } = props;
 
   let img = Tick;
-  if (selectAll) img = TickChecked;
+  if (selectAll) img = TickAll;
 
   const inputElement = useRef(null);
 
@@ -22,18 +22,19 @@ const Input = props => {
   return (
     <div className="Input">
       <img src={img}
-      alt="tick"
-      width="40px"
-      height="40px"
-      onClick={() => selectAllClick()}
+        alt="tick"
+        className="TickAll"
+        width="40px"
+        height="40px"
+        onClick={() => selectAllClick()}
       />
 
       <input
-      type="text"
-      placeholder="Create a new item..."
-      ref={inputElement}
-      maxLength="40"
-      onKeyUp={(event) => addItem(event)}
+        type="text"
+        placeholder="Create a new item..."
+        ref={inputElement}
+        maxLength="40"
+        onKeyUp={(event) => addItem(event)}
       />
     </div>
   );
