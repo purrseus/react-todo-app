@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 import './Input.css';
 import Tick from '../../assets/tick.svg';
 import TickAll from '../../assets/tick-all.svg';
@@ -38,6 +40,12 @@ const Input = props => {
       />
     </div>
   );
+};
+
+Input.propTypes = {
+  selectAll: PropTypes.bool.isRequired,
+  selectAllClick: PropTypes.func.isRequired,
+  addItem: PropTypes.func.isRequired
 };
 
 export default Input;

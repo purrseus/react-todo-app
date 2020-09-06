@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './ListItem.css';
 import TickItem from '../../assets/tick-item.svg';
 import TickCompleted from '../../assets/tick-completed.svg';
@@ -41,6 +43,17 @@ const ListItem = props => {
       />
     </div>
   );
+};
+
+ListItem.propTypes = {
+  key: PropTypes.number.isRequired,
+  item: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
+  }),
+  index: PropTypes.number.isRequired,
+  tickItem: PropTypes.func.isRequired,
+  removeItem: PropTypes.func.isRequired
 };
 
 export default ListItem;
