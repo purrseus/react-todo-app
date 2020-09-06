@@ -29,6 +29,7 @@ function App() {
       if (!event.target.value.trim()) {
         return;
       }
+
       const newItem = { title: event.target.value, completed: false };
       data.push(newItem);
       const newData = [...data];
@@ -78,10 +79,10 @@ function App() {
       <div className="CountItem">
         {
           count === 1 ?
-            `${count} task left`
+            `${count} item left`
             : count === 0 ?
               'Have a nice day!' :
-              `${count} tasks left`
+              `${count} items left`
         }
       </div>
     </div>

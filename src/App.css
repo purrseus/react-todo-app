@@ -1,7 +1,7 @@
 .App {
   width: 550px;
   margin: 50px 0px;
-  border-radius: 30px;
+  border-radius: 25px;
 
   display: flex;
   flex-direction: column;

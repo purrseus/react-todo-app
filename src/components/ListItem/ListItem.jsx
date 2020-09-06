@@ -23,8 +23,8 @@ const ListItem = props => {
       <img src={img}
         alt="tick"
         className="Tick"
-        width="40px"
-        height="40px"
+        width="30px"
+        height="30px"
         onClick={() => tickItem(item)}
       />
 
@@ -37,8 +37,8 @@ const ListItem = props => {
       <img src={Remove}
         alt="remove"
         className="Remove"
-        width="20px"
-        height="20px"
+        width="16px"
+        height="16px"
         onClick={() => removeItem(index)}
       />
     </div>
@@ -46,7 +46,6 @@ const ListItem = props => {
 };
 
 ListItem.propTypes = {
-  key: PropTypes.number.isRequired,
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired

@@ -35,8 +35,7 @@ const Input = props => {
         type="text"
         placeholder="Create a new item..."
         ref={inputElement}
-        maxLength="40"
-        onKeyUp={(event) => addItem(event)}
+        onKeyUp={event => addItem(event)}
       />
     </div>
   );

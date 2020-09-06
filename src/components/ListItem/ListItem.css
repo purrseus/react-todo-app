@@ -4,26 +4,33 @@ h3 {
 }
 
 .Item {
-  width: 95%;
   display: flex;
   align-items: center;
+  padding: 8px;
+  width: 95%;
   border-top: 1px solid #bbb;
+  transition: .3s;
+}
+
+.Item:hover .Remove{
+  opacity: 1;
 }
 
 .Tick {
-  margin: 10px 12px;
+  margin: 9px;
   cursor: pointer;
   transition: .3s;
 }
 
 .Tick:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 .Title {
-  margin-left: 15px;
-  flex-grow: 1;
+  width: 380px;
+  margin-left: 16px;
   font-size: 18px;
+  word-break: break-all;
 }
 
 .Completed {
@@ -32,11 +39,12 @@ h3 {
 }
 
 .Remove {
-  margin-right: 30px;
+  opacity: 0;
+  margin-left: 12px;
   cursor: pointer;
   transition: .3s;
 }
 
 .Remove:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
