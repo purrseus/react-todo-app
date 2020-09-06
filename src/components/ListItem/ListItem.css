@@ -16,6 +16,17 @@ h3 {
   opacity: 1;
 }
 
+.Content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.Edit {
+  width: 360px;
+  border-radius: 8px;
+}
+
 .Tick {
   margin: 9px;
   cursor: pointer;
@@ -31,11 +42,22 @@ h3 {
   margin-left: 16px;
   font-size: 18px;
   word-break: break-all;
+  cursor: pointer;
 }
 
 .Completed {
   text-decoration: line-through;
   opacity: .5;
+}
+
+.Cancel {
+  cursor: pointer;
+  margin-left: 12px;
+  transition: .3s;
+}
+
+.Cancel:hover {
+  transform: scale(1.2);
 }
 
 .Remove {

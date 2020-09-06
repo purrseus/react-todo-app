@@ -30,9 +30,12 @@ function App() {
         return;
       }
 
-      const newItem = { title: event.target.value, completed: false };
-      data.push(newItem);
-      const newData = [...data];
+      const newItem = {
+        title: event.target.value,
+        completed: false,
+        editMode: false
+      };
+      const newData = [newItem, ...data];
       setData(newData);
       localStorage.setItem('todoList', JSON.stringify(newData));
       event.target.value = '';
@@ -44,6 +47,27 @@ function App() {
     const newData = [...data];
     setData(newData);
     localStorage.setItem('todoList', JSON.stringify(newData));
+  };
+
+  const changeEditMode = item => {
+    item.editMode = !item.editMode;
+    const newData = [...data];
+    setData(newData);
+    localStorage.setItem('todoList', JSON.stringify(newData));
+  };
+
+  const editItem = (event, index) => {
+    if (event.keyCode === 13) {
+      if (!event.target.value.trim()) {
+        return;
+      }
+
+      data[index].title = event.target.value;
+      const newData = [...data];
+      setData(newData);
+      localStorage.setItem('todoList', JSON.stringify(newData));
+      changeEditMode(data[index]);
+    }
   };
 
   const removeItem = index => {
@@ -71,6 +95,8 @@ function App() {
               item={item}
               index={index}
               tickItem={tickItem}
+              changeEditMode={changeEditMode}
+              editItem={editItem}
               removeItem={removeItem}
             />)
         }

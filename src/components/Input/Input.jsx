@@ -16,7 +16,6 @@ const Input = props => {
   if (selectAll) img = TickAll;
 
   const inputElement = useRef(null);
-
   useEffect(() => {
     inputElement.current.focus();
   });
