@@ -21,8 +21,8 @@ const Options = props => {
     <div className="Options">
       <div className="CountItem">
         {
-          count === 1 ? `${count} item left` : count === 0 ?
-            'Have a nice day!' : `${count} items left`
+          count === 1 ? `${count} task left` : count === 0 ?
+            'Have a nice day!' : `${count} tasks left`
         }
       </div>
       {

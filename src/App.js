@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>- Todo List -</h1>
+      <h1>Todo List</h1>
       <Input data={data} setData={setData} />
       {
         !data.length ?
