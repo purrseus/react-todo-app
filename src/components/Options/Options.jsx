@@ -26,7 +26,7 @@ const Options = props => {
         }
       </div>
       {
-        [...data].find(item => item.completed === true) &&
+        data.find(item => item.completed === true) &&
         <button className="Btn" onClick={deleteCompleted}>Delete Completed</button>
       }
     </div>
