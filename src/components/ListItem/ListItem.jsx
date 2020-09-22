@@ -80,54 +80,54 @@ const ListItem = props => {
       />
 
       {
-        !item.editMode ?
-          <div className="Content">
-            <div
-              className={
-                item.completed ?
-                  "Title Completed" :
-                  "Title"
-              }
-            >{item.title}</div>
+        !item.editMode
+          ? <div className="Content">
+              <div
+                className={
+                  item.completed ?
+                    "Title Completed" :
+                    "Title"
+                }
+              >{item.title}</div>
 
-            <img
-              src={Edit}
-              alt="edit"
-              className="EditBtn"
-              title="Edit"
-              width="20px"
-              height="20px"
-              onClick={changeEditMode}
-            />
+              <img
+                src={Edit}
+                alt="edit"
+                className="EditBtn"
+                title="Edit"
+                width="20px"
+                height="20px"
+                onClick={changeEditMode}
+              />
 
-            <img src={Remove}
-              alt="remove"
-              className="Remove"
-              title="Remove"
-              width="16px"
-              height="16px"
-              onClick={removeItem}
-            />
-          </div>
-          :
-          <div className="Content">
-            <input
-              className="Edit"
-              type="text"
-              placeholder="Edit item..."
-              ref={inputElement}
-              onKeyUp={event => editItem(event)}
-            />
+              <img src={Remove}
+                alt="remove"
+                className="Remove"
+                title="Remove"
+                width="16px"
+                height="16px"
+                onClick={removeItem}
+              />
+            </div>
 
-            <img src={Exit}
-              alt="cancel"
-              className="Cancel"
-              title="Cancel"
-              width="20px"
-              height="20px"
-              onClick={changeEditMode}
-            />
-          </div>
+          : <div className="Content">
+              <input
+                className="Edit"
+                type="text"
+                placeholder="Edit item..."
+                ref={inputElement}
+                onKeyUp={event => editItem(event)}
+              />
+
+              <img src={Exit}
+                alt="cancel"
+                className="Cancel"
+                title="Cancel"
+                width="20px"
+                height="20px"
+                onClick={changeEditMode}
+              />
+            </div>
       }
     </div>
   );
