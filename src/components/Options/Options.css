@@ -1,7 +1,7 @@
 .Options {
   width: 88%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-top: 1px solid #bbb;
   padding: 20px 20px;
@@ -9,12 +9,13 @@
 
 .Btn {
   padding: 8px 16px;
+  margin-left: 100px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   background-color: #3bb54a;
   color: #fff;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 .Btn:hover {

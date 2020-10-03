@@ -8,7 +8,7 @@ h3 {
   align-items: center;
   padding: 8px;
   border-top: 1px solid #bbb;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 .Item:hover .Remove {
@@ -58,7 +58,7 @@ h3 {
   opacity: 0;
   cursor: pointer;
   margin: 0px 12px;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 .EditBtn:hover {
@@ -68,7 +68,7 @@ h3 {
 .Cancel {
   cursor: pointer;
   margin-left: 12px;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 .Cancel:hover {
@@ -79,7 +79,7 @@ h3 {
   opacity: 0;
   margin-left: 10px;
   cursor: pointer;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 .Remove:hover {

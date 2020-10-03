@@ -19,7 +19,7 @@ input:focus {
 .TickAll {
   margin: 10px 0px;
   cursor: pointer;
-  transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 .TickAll:hover {
