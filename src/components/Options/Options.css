@@ -31,3 +31,17 @@
   padding: 6px
 }
 
+@media only screen and (max-width: 480px) {
+  .Options {
+    height: 60px;
+    padding: 5px;
+  }
+  
+  .CountItem {
+    font-size: 14px;
+  }
+
+  .Btn {
+    margin-left: 10px;
+  }
+}
